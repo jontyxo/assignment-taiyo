@@ -34,7 +34,7 @@ const WorldMap = () => {
     <>
     <div className='headlineWM'>World Map</div>
     <div className='mapParent'>
-     <MapContainer  style={{ height: '50vh',width:'60vw' }}center={[51.505, -0.09]} zoom={2} >
+     <MapContainer  style={{ height: '80vh',width:'75vw' }}center={[ 44.0479,40.6197]} zoom={3} >
     <TileLayer   
 
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

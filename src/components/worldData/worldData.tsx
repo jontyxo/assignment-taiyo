@@ -35,11 +35,11 @@ const WorldData = () => {
     <>
     <span className='headlineWD'> World Wide Data</span>
     <div className='WorldData'>
-        <span>Total Cases: {worldData.cases}</span>
-        <span>Total Deaths: {worldData.deaths}</span>
-        <span>Total Recovered: {worldData.recovered}</span>
-        <span>Active Cases: {worldData.active}</span>
-        <span>Countries Affected: {worldData.affectedCountries}</span>
+        <span className='worldDataInfo'>Total Cases: {worldData.cases}</span>
+        <span className='worldDataInfo'>Total Deaths: {worldData.deaths}</span>
+        <span className='worldDataInfo'>Total Recovered: {worldData.recovered}</span>
+        <span className='worldDataInfo'>Active Cases: {worldData.active}</span>
+        <span className='worldDataInfo'>Countries Affected: {worldData.affectedCountries}</span>
 
     </div>
     </>

@@ -51,19 +51,11 @@ const Chart = ( ) => {
       },
     ]
   }
-const options={};
 
   return (
     <>
     <div className="headlineC">Case Fluctuation Chart:</div>
     <div className="chart">
-      {/* <ul>
-        {Object.entries(chartData.cases).map(([date, cases]) => (
-          <li key={date}>
-            {date}: {cases}
-          </li>
-        ))}
-      </ul> */}
       <div className='chart' >
         <Line data={data}></Line>
       </div>

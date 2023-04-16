@@ -1,5 +1,6 @@
 .mapMain{
     position: absolute;
-    right: 10%;
+    left:20vw;
     margin: 1rem 0rem;
+    max-width: 75vw;
 }
