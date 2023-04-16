@@ -1,0 +1,7 @@
+.mapMain{
+    padding: 3rem 2rem;
+}
+.headlineWM{
+    font-size: clamp(16px, 4vw, 32px);
+    margin: 2rem 0rem;
+}

@@ -1,0 +1,13 @@
+.navbar{
+    background: bisque;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 10rem;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+}
+.navbar >span{
+    padding: 1rem 3rem;
+}

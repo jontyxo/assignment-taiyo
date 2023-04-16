@@ -1,0 +1,9 @@
+.chart{
+    width: 50vw;
+    height: 60vh;
+    padding-top: 1rem;
+}
+.headlineC{
+    margin: 2rem 0rem;
+    font-size: clamp(16px, 4vw, 32px);
+}
