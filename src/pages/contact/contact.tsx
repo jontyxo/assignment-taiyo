@@ -1,11 +1,12 @@
 import React from 'react'
 import ContactForm from '../../components/contactForm/ContactForm'
 import ContactList from '../../components/contactList/contactList'
+import "./contact.css"
 
 
 const Contact = () => {
   return (
-    <div style={{display:'flex',alignItems: 'center',flexDirection: 'column'}}>
+    <div className='contact'>
       <ContactForm />
     <ContactList /></div>
   )

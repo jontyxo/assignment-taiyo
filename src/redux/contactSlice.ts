@@ -9,7 +9,7 @@ interface Contact {
   
   }
   const initialState: ContactsState = {
-    contacts: [],
+    contacts: []
   };
 export const contactSlice = createSlice({
     name:"contact", //name of the store
@@ -21,7 +21,7 @@ export const contactSlice = createSlice({
                 firstName:action.payload.fname,
                 lastName:action.payload.lname
             })
-            localStorage.setItem('contacts', JSON.stringify(state));
+            // localStorage.setItem('contacts', JSON.stringify(state));
            },
            deleteContact: (state, action):void =>{
             state.contacts = state.contacts.filter((contact) => contact.id !== action.payload);

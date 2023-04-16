@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useRef, useState } from 'react'
+import "./ContactForm.css"
+import { useDispatch } from 'react-redux'
 import { addContact } from '../../redux/contactSlice';
 import { useAppSelector } from '../../redux/store';
 type Props = {}
@@ -8,9 +9,13 @@ type Props = {}
 const ContactForm = (props: Props) => {
     const fnameRef=useRef<HTMLInputElement>(null);
     const lnameRef=useRef<HTMLInputElement>(null);
+    const [isOpen,setIsOpen]=useState<boolean>(false);
     const contacts = useAppSelector(state => state.contact.contacts);
     console.log(contacts)
 const dispatch=useDispatch();
+const handleToggle=()=>{
+setIsOpen(!isOpen);
+}
 
     const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
@@ -23,13 +28,26 @@ const dispatch=useDispatch();
    
 
   return (
-    <div>Add Contact
-        <form  onSubmit={handleAddContact}> 
-            <input ref={fnameRef} type="text" name="firstName" placeholder='first name' required={true}/>
-            <input ref={lnameRef} type="text" name="lastName" placeholder='last name' required={true}/>
-            <button type="submit">Save Contact</button>
+    <>
+    {isOpen && 
+    <div className="modalContact">
+
+    <div className='addContact'><span className='addcontacthead'>Add Contact</span>
+        <form  className='contactform' onSubmit={handleAddContact}> 
+        <label>First name</label>
+            <input className='contactforminput' ref={fnameRef} type="text" name="firstName"  required={true}/>
+        <label>Last name</label>
+
+            <input className='contactforminput' ref={lnameRef} type="text" name="lastName"  required={true}/>
+            <button className='addcontactbtn' type="submit">Save Contact</button>
+
         </form>
+        <button  className='formTogglebtn' onClick={handleToggle}>X</button>
+
     </div>
+    </div>}
+    <button  className='contactToggleBtn' onClick={handleToggle}>Add Contact</button>
+    </>
   )
 }
 

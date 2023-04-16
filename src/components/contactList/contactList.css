@@ -1,0 +1,33 @@
+.contactList{
+    background: #f0564f;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    align-items: center;
+    border-radius: 12px;
+    margin: 3rem 3rem;
+    padding: 2rem 0rem;
+}
+.contactDetail{
+    color: aliceblue;
+    padding: 3px 0px;    
+}
+.contactListSection{
+    padding: 3rem 0rem;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.deletebtn{
+    background: transparent;
+    color: #fff;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.contactButton{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}

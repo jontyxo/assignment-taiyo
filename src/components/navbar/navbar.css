@@ -1,5 +1,5 @@
 .navbar{
-    background: bisque;
+    background: #f0564f;
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
@@ -7,7 +7,17 @@
     height: 100vh;
     z-index: -1;
     position: fixed;
+  
 }
-.navbar >span{
+.navbar-span{
     padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+.link{
+    text-decoration: none;
+    font-weight: normal;
+    font-weight: 600;
+    color: #fff;
 }
