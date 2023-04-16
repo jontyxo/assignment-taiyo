@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { deleteContact } from '../../redux/contactSlice';
 import {  useDispatch} from "react-redux";
 import "./contactList.css"
+import FormComponent from '../editformComponent/form';
 
 
 
 const ContactList = () => {
     const contacts = useAppSelector(state => state.contact.contacts);
-    const handleDelete=(id:number)=>{
-dispatch(deleteContact(id))        
-    }
+  const [editOpen,setEditOpen]=useState<boolean>(false)
+  const [currId,setCurrId]=useState<number|undefined>();
 const dispatch =useDispatch();
+const handleEdit=(id:number)=>{
+  setEditOpen(!editOpen)
+  setCurrId(id);
+}
 if(contacts.length===0){
   return (
     <p className='nocontactlist'>No Contacts Now! <br /> use the form to add</p>
@@ -19,7 +23,8 @@ if(contacts.length===0){
 }
   return (
     <>
-
+   
+ {editOpen && <FormComponent id={currId} /> }
     <div className="contactListSection">
    {contacts&& contacts?.map(contact =>(
      <div className="contactList">
@@ -29,6 +34,8 @@ if(contacts.length===0){
    
 <div className="contactButton">
      <button className='deletebtn' onClick={()=>dispatch(deleteContact(contact.id))}>Delete</button>
+     <button className='deletebtn' onClick={() => handleEdit(contact.id)}>Edit</button>
+
   </div>    
    </div>
 

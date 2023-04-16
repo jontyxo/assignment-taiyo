@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import "./Map.css"
 import axios from "axios";
+import {Icon} from "leaflet"
 
 interface CountryData {
   country: string;
@@ -40,10 +41,15 @@ const WorldMap = () => {
     />
   
 
+  <MarkerClusterGroup>
   {data?.map((country) => (
+
       <Marker
       key={country.countryInfo._id}
-      
+      icon={new Icon({
+        iconUrl: country.countryInfo.flag,
+        iconSize:[15,15]
+      })}
       position={[country.countryInfo.lat, country.countryInfo.long]}
       
       
@@ -56,6 +62,7 @@ const WorldMap = () => {
             </Popup>
           </Marker>
         ))}
+        </MarkerClusterGroup>
        
   </MapContainer>
 </div>

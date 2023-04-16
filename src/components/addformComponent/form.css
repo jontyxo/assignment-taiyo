@@ -27,7 +27,6 @@ label{
     color: white;
     cursor: pointer;
 }
-
 .formTogglebtn{
     top: -15%;
     position: absolute;
@@ -44,7 +43,18 @@ label{
     display: flex;
     flex-direction: column;
 }
-
+.modalContact{
+    overflow: hidden;
+    position: absolute; 
+    width: 70vw;
+   height: 100vh;
+    overflow: hidden;
+    width: 75vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .contactforminput{
     background-color: transparent;
     border: 1px solid white;

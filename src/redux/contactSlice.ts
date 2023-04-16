@@ -21,13 +21,24 @@ export const contactSlice = createSlice({
                 firstName:action.payload.fname,
                 lastName:action.payload.lname
             })
-            // localStorage.setItem('contacts', JSON.stringify(state));
+            localStorage.setItem('contacts', JSON.stringify(state));
+            const s=localStorage.getItem('contacts');
+         
            },
            deleteContact: (state, action):void =>{
             state.contacts = state.contacts.filter((contact) => contact.id !== action.payload);
-           }
+           },
+           editContact:(state, action) =>{
+            const { id } = action.payload;
+            
+            const contactIndex = state.contacts.findIndex((contact) => contact.id === id);
+            if (contactIndex !== -1 && state.contacts[contactIndex]) {
+              state.contacts[contactIndex].firstName = action.payload.fname;
+              state.contacts[contactIndex].lastName = action.payload.lname;
+            }
+          }
     }
 })
 
-export const {addContact,deleteContact} =contactSlice.actions;
+export const {addContact,deleteContact,editContact} =contactSlice.actions;
 export default contactSlice.reducer;
