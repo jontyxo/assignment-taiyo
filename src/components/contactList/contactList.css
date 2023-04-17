@@ -10,7 +10,7 @@
 }
 .nocontactlist{
     padding: 2rem;
-    font-size: clamp(8px,1.5vw,18px);
+    font-size: clamp(10px,1.5vw,18px);
 }
 .contactDetail{
     color: aliceblue;

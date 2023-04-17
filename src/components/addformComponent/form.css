@@ -57,7 +57,7 @@ label{
     padding: 5px 8px;
     margin: 10px 0px;
     color: white;
-    font-size: clamp(12px,2vw,20px);
+    font-size: clamp(12px,2vw,18px);
 }
 .contactToggleBtn{
     background: #f0564f;

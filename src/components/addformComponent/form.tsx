@@ -29,6 +29,7 @@ const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
         const lname=lnameRef.current?.value
 
         dispatch(addContact({fname,lname}))
+        window.location.href = 'http://localhost:3000/';
     }
   return (
    <>
