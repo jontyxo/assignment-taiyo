@@ -1,6 +1,6 @@
 .addcontacthead{
     margin: 2rem 0rem;
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: clamp(16px, 3vw, 24px);
     color: white;
     font-weight: 600;
 }
@@ -18,7 +18,7 @@
 }
 label{
     color: #fff;
-    font-size: clamp(12px,2vw,20px);
+    font-size: clamp(10px,1vw,16px);
 }
 .addcontactbtn{
     margin: 2rem ;
@@ -27,7 +27,7 @@ label{
     border:1px solid white;
     color: white;
     cursor: pointer;
-    font-size: clamp(12px,2vw,20px);
+    font-size: clamp(10px,1vw,16px);
 }
 .formTogglebtn{
     top: -15%;
@@ -51,7 +51,7 @@ label{
        width: 75vw;
         background: white;
         display: flex;
-    
+    z-index: 1;
         align-items: center;
 }
 .contactforminput{
@@ -60,9 +60,9 @@ label{
     border-radius:9px;
     width: 100%;
     padding: 5px 8px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     color: white;
-    font-size: clamp(12px,2vw,18x);
+    font-size: clamp(10px,1vw,16px);
 }
 .contactToggleBtn{
     background: #f0564f;

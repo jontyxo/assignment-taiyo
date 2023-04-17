@@ -20,6 +20,10 @@ const FormComponent = (props: Props) => {
     }
     const fnameRef=useRef<HTMLInputElement>(null);
     const lnameRef=useRef<HTMLInputElement>(null);
+    const numberRef=useRef<HTMLInputElement>(null);
+    const emailRef=useRef<HTMLInputElement>(null);
+    const addressRef=useRef<HTMLInputElement>(null);
+    
     const contacts = useAppSelector(state => state.contact.contacts);
 const dispatch=useDispatch();
 const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
@@ -27,9 +31,12 @@ const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
         console.log(fnameRef.current?.value)
         const fname=fnameRef.current?.value
         const lname=lnameRef.current?.value
+        const phone=numberRef.current?.value
+        const email=emailRef.current?.value
+        const address=addressRef.current?.value
 
-        dispatch(addContact({fname,lname}))
-        window.location.href = 'https://taiyo-assignment.vercel.app/';
+        dispatch(addContact({fname,lname,phone,email,address}))
+        window.location.href = 'http://localhost:3000/';
     }
   return (
    <>
@@ -43,6 +50,16 @@ const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
         <label>Last name</label>
         
             <input className='contactforminput' ref={lnameRef} type="text" name="lastName"  required={true}/>
+            <label>Phone Number</label>
+        
+            <input className='contactforminput' ref={numberRef} type="number" name="number"  required={true}/>
+            <label>Email</label>
+        
+        <input className='contactforminput' ref={emailRef} type="email" name="email"  required={true}/>
+        <label>Address</label>
+        
+        <input className='contactforminput' ref={addressRef} type="text" name="address"  required={true}/>
+            
             <button className='addcontactbtn' type="submit">Save Contact</button>
 
         </form>

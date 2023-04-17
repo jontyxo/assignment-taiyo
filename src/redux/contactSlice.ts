@@ -3,6 +3,10 @@ interface Contact {
     id:number;
     firstName: string;
     lastName: string;
+    phone?:number,
+    email?:string,
+    address?:string
+    
    }
    interface ContactsState {
     contacts: Contact[];
@@ -19,12 +23,12 @@ export const contactSlice = createSlice({
             state.contacts.push({
                 id:state.contacts.length,
                 firstName:action.payload.fname,
-                lastName:action.payload.lname
+                lastName:action.payload.lname,
+                phone:action.payload.phone,
+                email:action.payload.email,
+                address:action.payload.address
             })
-            localStorage.setItem('contacts', JSON.stringify(state));
-            const s=localStorage.getItem('contacts');
-         
-           },
+              },
            deleteContact: (state, action):void =>{
             state.contacts = state.contacts.filter((contact) => contact.id !== action.payload);
            },
@@ -33,8 +37,27 @@ export const contactSlice = createSlice({
             
             const contactIndex = state.contacts.findIndex((contact) => contact.id === id);
             if (contactIndex !== -1 && state.contacts[contactIndex]) {
-              state.contacts[contactIndex].firstName = action.payload.fname;
-              state.contacts[contactIndex].lastName = action.payload.lname;
+              if(action.payload.fname){
+
+                state.contacts[contactIndex].firstName = action.payload.fname;
+              }
+              if(action.payload.lname){
+
+                state.contacts[contactIndex].lastName = action.payload.lname;
+              }
+              if(action.payload.phone){
+
+                state.contacts[contactIndex].phone = action.payload.phone;
+              }
+              if(action.payload.email){
+
+                state.contacts[contactIndex].email = action.payload.email;
+              }
+              if(action.payload.address){
+
+                state.contacts[contactIndex].address = action.payload.address;
+              }
+
             }
           }
     }
