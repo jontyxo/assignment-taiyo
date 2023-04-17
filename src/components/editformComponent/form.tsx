@@ -32,7 +32,7 @@ const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
         const fname=fnameRef.current?.value
         const lname=lnameRef.current?.value
         dispatch(editContact({id,fname,lname}))
-        window.location.href = 'http://localhost:3000/';
+        window.location.href = 'https://taiyo-assignment.vercel.app/';
 
     }
   return (
