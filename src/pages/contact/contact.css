@@ -1,10 +1,11 @@
 .contact{
-    display:flex;
+    left: 17vw;
+    display: flex;
     align-items: center;
     flex-direction: column;
     padding: 2rem 0rem;
     position: absolute;
-    right: 10%;
+    width: 80%;
 }
 .nocontactlist{
     width: 75vw;

@@ -8,7 +8,7 @@
 .addContact{
     border: 1px solid black;
     background-color:#f0564f;
-  width: 30vw;
+  width: 70vw;
   border-radius: 12px;
     height: max-content;
     display: flex;
@@ -18,6 +18,7 @@
 }
 label{
     color: #fff;
+    font-size: clamp(12px,2vw,20px);
 }
 .addcontactbtn{
     margin: 2rem ;
@@ -26,6 +27,7 @@ label{
     border:1px solid white;
     color: white;
     cursor: pointer;
+    font-size: clamp(12px,2vw,20px);
 }
 .formTogglebtn{
     top: -15%;
@@ -44,16 +46,8 @@ label{
     flex-direction: column;
 }
 .modalContact{
-    overflow: hidden;
-    position: absolute; 
-    width: 70vw;
-   height: 100vh;
-    overflow: hidden;
+    position: fixed;
     width: 75vw;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .contactforminput{
     background-color: transparent;
@@ -63,6 +57,7 @@ label{
     padding: 5px 8px;
     margin: 10px 0px;
     color: white;
+    font-size: clamp(12px,2vw,20px);
 }
 .contactToggleBtn{
     background: #f0564f;

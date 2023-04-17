@@ -2,32 +2,48 @@
     background: #f0564f;
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 30vw;
     align-items: center;
     border-radius: 12px;
-    margin: 3rem 3rem;
+    margin: 2rem 1rem;
     padding: 2rem 0rem;
+}
+.nocontactlist{
+    padding: 2rem;
+    font-size: clamp(8px,1.5vw,18px);
 }
 .contactDetail{
     color: aliceblue;
     padding: 3px 0px;    
+    font-size: clamp(12px,2vw,18px);
+
 }
 .contactListSection{
     padding: 3rem 0rem;
-    width: 70vw;
+    width: 75vw;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .deletebtn{
     background: transparent;
     color: #fff;
     padding: 4px 8px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 12px;
+    font-size: clamp(12px,2vw,18px);
     cursor: pointer;
+    margin: 0 5%;
+
 }
 .contactButton{
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+}
+@media screen and (max-width: 450px){
+.contactList{
+    width: 80%;
+}
+    
 }

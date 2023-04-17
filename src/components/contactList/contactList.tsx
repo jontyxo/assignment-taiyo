@@ -18,7 +18,7 @@ const handleEdit=(id:number)=>{
 }
 if(contacts.length===0){
   return (
-    <p className='nocontactlist'>No Contacts Now! <br /> use the form to add</p>
+    <p className='nocontactlist'>No Contacts Now!😓 <br /> Use the Button</p>
   )
 }
   return (
