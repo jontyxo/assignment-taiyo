@@ -7,7 +7,6 @@ type Props = {}
 interface WorldData{
    
     cases: string,
-    todayCases: 14283,
     deaths: number,
     recovered: number,
     active: number,
@@ -22,7 +21,7 @@ const WorldData = () => {
           return response.json();
         }
       );
-      console.log(worldData)
+      
       if (isLoading) {
         return <div className='WorldData'>Loading...</div>;
       }

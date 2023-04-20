@@ -25,9 +25,10 @@ interface CountryData {
 
 const WorldMap = () => {
     const { data } = useQuery<CountryData[]>(["countries"], async () => {
-        const response = await axios.get<CountryData[]>(
+        const response = await axios.get(
           "https://disease.sh/v3/covid-19/countries"
         );
+      
         return response.data;
       });
   return (
