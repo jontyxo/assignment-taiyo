@@ -56,6 +56,17 @@ width: 60%;
     padding: 2% 10%;
     font-size: clamp(10px,2vw,16px)
 }
+.detailBtnText{
+    color: white;
+
+  
+    font-size: 12px;
+    width: inherit;
+}
+.detailsbtndiv{
+    position: relative;
+    left: 40%;
+}
 @media screen and (max-width: 450px){
 .contactList{
     width: 80%;

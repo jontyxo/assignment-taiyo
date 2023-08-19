@@ -34,9 +34,10 @@ if(contacts.length===0){
       <div className="contactHeader">
 
     <span className="contactDetail">Contact Info:</span>
-    <button className='detailsBtn' onClick={() => setShowDetails(!showDetails)}>
-    {showDetails ? <ArrowDropUpIcon /> : <ArrowDropDownCircleIcon />}
-    </button>
+    <div className='detailsbtndiv' onClick={() => setShowDetails(!showDetails)}> 
+    {showDetails ? <><p className="detailBtnText">Show Less</p><button className='detailsBtn' ><ArrowDropUpIcon /> </button></> : <><p className="detailBtnText">Show More</p>  <button className='detailsBtn' ><ArrowDropDownCircleIcon /> </button></>}
+
+    </div>
     <hr />
       </div>
     <span className="contactDetail"> First Name: {contact.firstName}</span>
@@ -45,7 +46,7 @@ if(contacts.length===0){
    { showDetails &&<>
  <span className="contactDetail">Phone Number {contact.phone}</span>
  <span className="contactDetail"> Email: {contact.email}</span>
- <span className="contactDetail"> Address: {contact.address}</span>
+ {/* <span className="contactDetail"> Address: {contact.address}</span> */}
      <div className="contactButton">
      
      <button className='deletebtn' onClick={()=>dispatch(deleteContact(contact.id))}>Delete</button>
