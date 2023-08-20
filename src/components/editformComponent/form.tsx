@@ -50,7 +50,7 @@ const handleAddContact=(e:React.FormEvent<HTMLFormElement>)=>{
     <div className='addContact'><span className='addcontacthead'>Edit Contact</span>
         <form  className='contactform' onSubmit={handleAddContact}> 
         <label>First name</label>
-        <input className='contactforminput' ref={fnameRef} type="text" name="firstName" placeholder="id" />
+        <input className='contactforminput' ref={fnameRef} type="text" name="firstName" />
         <label>Last name</label>
         <input className='contactforminput' ref={lnameRef} type="text" name="lastName"  />
             <label>Phone Number</label>
